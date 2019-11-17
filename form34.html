@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <style>
+     @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+       *{
+        margin:0;
+        padding:0;
+        font-family: sans-serif;
+    }
+    body{
+        background:#333;
+    }
+    .btn{
+        position:absolute;
+        top:40px;
+        right:40px;
+        color:white;
+        font-size: 36px;
+        cursor:pointer;
+        transition: 0.4s;
+    }
+    .btn:hover{
+        transform: rotate(90deg);
+    }
+    .box{
+        position: absolute;
+        top:-50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        background:#f1f1f1;
+        width:400px;
+        transition:1s;
+    }
+    .box-show{
+        top:50%;
+    }
+    .box h2{
+            background:#2c3e50;
+            padding:20px;
+            font-size:18px;
+            color:white;
+            text-transform: uppercase;
+        }
+        .box-c{
+            padding:20px 40px;
+            overflow: hidden;
+        }
+        .txtb{
+            position: relative;
+            margin-bottom: 10px;
+        }
+        #hex{
+            width:100%;
+            text-align: center;
+            height:40px;
+            border:1px solid #2c3e50;
+        }
+        .prev{
+            width:50px;
+            height:30px;
+            position:absolute;
+            top:5px;
+            left:5px;
+        }
+        .apply{
+            float:right;
+            border:none;
+            background: #2c3e50;
+            text-transform: uppercase;
+            padding:6px 30px;
+            color:white;
+            cursor: pointer;
+        }
+        #menu{
+            margin:0;
+            padding:0;
+            margin-top:350px;
+
+        }
+        #menu li{
+            list-style: none;
+            display: inline-block;
+
+        }
+        #menu li a{
+            text-decoration: none;
+            position: relative;
+            color:#f1f1f1;
+            font-size:30px;
+            font-weight:700;
+            font-family:sans-serif;
+            display: block;
+            overflow: hidden;
+            transition: 0.7s all;
+            padding:14px 30px;
+            text-transform: uppercase;
+        }
+        #menu li a:before{
+            content:"";
+            width:60px;
+            position: absolute;
+            border-bottom: 8px solid #f1f1f1;
+            bottom:0;
+            right:350px;
+            transition:0.7s all;
+        }
+        #menu li a:hover:before{
+            right:0;
+        }
+      
+    </style>
+</head>
+<body>
+        <ul id="menu">
+            <ul>
+                <center>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Works</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </center>
+            </ul>
+        </ul>
+    <div class="btn">
+        <i class="fa fa-cog" aria-hidden="true"></i>
+    </div>
+    <div class="box">
+        <h2>Enter a color</h2>
+        <div class="box-c">
+            <div class="txtb">
+                <input type="text" placeholder="#000000" id="hex">
+                <div class="prev"></div>
+            </div>
+            <button class="apply">Apply</button>
+        </div>
+    </div>
+    <script>
+        //tto show and hide the box
+        $(".btn").click(function(){
+            $(".box").toggleClass("box-show");
+        });
+
+        //to have a preview of color
+        $("#hex").keyup(function(){
+          $(".prev").css("background",$("#hex").val());
+        });
+
+        //to apply color
+        $(".apply").click(function(){
+            $("body").css("background",$("#hex").val());
+            $(".box").toggleClass("box-show");
+        });
+
+        //to hide the box after applyuing the color
+        
+        </script>
+</body>
+</html>

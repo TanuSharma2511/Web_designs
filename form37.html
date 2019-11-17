@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{
+        margin:0;
+        padding:0;
+        font-family:sans-serif;
+    }
+    .searchbox{
+        width:90%;
+        margin:10px auto;
+    }
+    .header{
+        background:#34495e;
+        overflow:hidden;
+        padding:20px;
+        text-align:center;
+    }
+    .header h1{
+        text-transform: uppercase;
+        color:white;
+        margin:0;
+        margin-bottom:8px;
+    }
+    #value{
+        border:none;
+        background:#2c3e50;
+        padding:6px;
+        font-size: 18px;
+        width:80%;
+        border-radius:6px;
+        color:white;
+    }
+    .container{
+        background:#f1f1f1;
+    }
+    .profile{
+        margin:6px 0;
+        display:flex;
+        align-items:center;
+    }
+    .icon{
+        width:40px;
+        height:40px;
+        background:#2c3e50;
+        color:white;
+        font-size: 24px;
+        text-align: center;
+        line-height:40px;
+        border-radius: 50%;
+        margin-right:8px;
+    }
+    .name{
+        font-size:18px;
+        font-weight:600;
+        color:#333;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="searchbox">
+        <div class="header">
+            <h1>Contacts</h1>
+            <input onkeyup="filter()" type="text" id="value" placeholder="Type to Search">
+        </div>
+
+        <div class="container">
+            <div class="profile">
+                <span class="icon">A</span>
+                <span class="name">Archie Singhal</span>
+            </div>
+            <div class="profile">
+                <span class="icon">C</span>
+                <span class="name">Carlos Gem</span>
+            </div>
+            <div class="profile">
+                <span class="icon">S</span>
+                <span class="name">Supriya Thakur</span>
+            </div>
+            <div class="profile">
+                <span class="icon">D</span>
+                <span class="name">Daniel Redcliff</span>
+            </div>
+            <div class="profile">
+                <span class="icon">C</span>
+                <span class="name">Chaman Gupta</span>
+            </div>
+            <div class="profile">
+                <span class="icon">P</span>
+                <span class="name">Priya Rathi</span>
+            </div>
+            <div class="profile">
+                <span class="icon">A</span>
+                <span class="name">Arya Bedi</span>
+            </div>
+            <div class="profile">
+                <span class="icon">A</span>
+                <span class="name">Nancy Tomer</span>
+            </div>
+            <div class="profile">
+                <span class="icon">T</span>
+                <span class="name">Taarak Mehta</span>
+            </div>
+            <div class="profile">
+                <span class="icon">B</span>
+                <span class="name">Bobby Deol</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        function filter(){
+
+            var value,name,profile,i;
+
+            value=document.getElementById("value").value.toUpperCase();
+            profile=document.getElementsByClassName("profile");
+
+            for(i=0;i<profile.length;i++){
+                name=profile[i].getElementsByClassName("name")
+                if(name[0].innerHTML.toUpperCase().indexOf(value)>-1){
+                    profile[i].style.display="flex";
+
+                }
+                else{
+                    profile[i].style.display="none";
+                }
+                
+            }
+        };
+        </script>
+
+</body>
+</html>
+<div class="task">
+    task
+    <i class="fa fa-trash" aria-hidden="true"></i>
+    
+</div>
+<div class="task">
+    task
+    <i class="fa fa-trash" aria-hidden="true"></i>
+    
+</div>
+
+
+
+<div class="task">
+    task
+    <i class="fa fa-trash" aria-hidden="true"></i>
+    <i class="fa fa-check" aria-hidden="true"></i>
+</div>

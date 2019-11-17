@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        /* font awesome cdn is not working...*/
+    body{
+        margin:0;
+        padding:0;
+        font-family:sans-serif;
+    }
+    .banner{
+        width:100%;
+        height:100vh;
+        background:url(girl.jpg);
+        background-size: cover; 
+        background-attachment: fixed;
+    }
+    .content{
+        padding:50px 100px;
+    }
+    .content h2{
+        margin:0 0 20px;
+        padding:0;
+        font-size: 30px;
+    }
+    .content p{
+        font-size:18px;
+    }
+    .slidebar-contact{
+        position:fixed;
+        top:50%;
+        left:-350px;
+        transform:translateY(-50%);
+        width:350px;
+        height:auto;
+        padding:40px;
+        background:#fff;
+        box-shadow:0 20px 50px rgba(0,0,0,.5);
+        box-sizing: border-box;
+        transition: 0.5s;
+    }
+    .slidebar-contact.active
+    {
+        left:0px;
+    }
+     .slidebar-contact input,.slidebar-contact textarea{
+        width:100%;
+        height:36px;
+        padding:5px;
+        margin-bottom:10px;
+        box-sizing:border-box;
+        border:1px solid rgba(0,0,0,.5);
+        outline:none;
+     }
+     .slidebar-contact textarea{
+         height:60px;
+         resize:none;
+     }
+     .slidebar-contact input[type="submit"]{
+         background:#00bcd4;
+         color:#fff;
+         cursor: pointer;
+         border:none;
+         font-style:18px;
+     }
+     .slidebar-contact h2{
+         margin:0 0 20px;
+         padding:0;
+     }
+     .toggle{
+         position:absolute;
+         top:0;
+        right:-48px;
+
+         width:48px;
+         height:48px;
+         line-height:48px;
+         text-align:center;
+         cursor:pointer;
+         background:#f00;
+     }
+     .toggle:before{
+        content:"\f003";
+        font-family:fontAwesome;
+        color:#fff;
+        font-size:18px;
+     }
+     .toggle.active:before{
+         content:"\f00d";
+     }
+    </style>
+</head>
+<body>
+    <div class="slidebar-contact">
+        <div class="toggle"></div>
+        <h2>Contact Us</h2>
+    <form>
+        <input type="text" name="" placeholder="Name">
+        <input type="email" name="" placeholder="Email">
+        <input type="rel" name="" placeholder="Phone number">
+         <textarea placeholder="Message"></textarea>
+         <input type="submit" name="" value="Send"></inpu>
+    </form>
+</div>
+    <div class="banner"> </div>
+        <div class="content">
+            <h2>Independence Day</h2>
+            <p>15th August 1947 is the day of great significance in the history of India. On this auspicious day, India achieved its freedom from the British rule and became a free and democratic country. It’s a historical day as several freedom fighters sacrificed their lives to liberate the nation. The respect for the Independence Day is still strong in the hearts of every Indian, which can be easily evinced from the grand celebrations that happen nationwide.
+
+            It’s a spectacular scene and different states celebrate the occasion in a different way; but the view of the capital city is fabulous. Pipe railings are fixed on the sides of the road leading to the Red Fort and hundreds of loudspeakers get fixed around the fort so that even distant people can hear the speech of the Prime Minister without any difficulty. In order to regulate the traffic, police deputations are posted in large numbers who also ensure the security of the V.I.Ps, diplomatic envoys, foreign dignitaries, Ministers and Members of Parliament, etc.
+            
+            Media also plays an important role and ensures that no single event gets missed by the common citizen and hence, Doordarshan, other TV channels and All-India Radio make special arrangements for a live telecast along with the running commentary.
+            Independence Day is a National Festival of India celebrated on 15th of August every year. India became a free country on this day and it’s only then we could secure our democratic rights as citizens of India. Our Independence gives us the reason to enjoy our fundamental rights laid down by the constitution. We are now a self-governed democratic country and have the voting rights. The feeling of self-reliance and freedom fills the heart of the citizens with supreme happiness and joy. It is all due to the tireless efforts and numerous sacrifices of several great people who sacrificed their lives without any fear.
+            Every year on 15th August, India celebrates Independence Day. India became an independent country in the year 1947, thus a gazetted holiday is declared annually to commemorate this date. Each one of us is born free, dies free and wants to live free. India achieved its Independence with great struggle and effort. Several freedom fighters and many great men sacrificed their lives to achieve nation’s freedom from the grip of British rule.
+
+            The movement of independence in India was started by the Indian freedom fighters under the leadership of Mahatma Gandhi. These freedom fighters endured severe struggle in order to achieve the nation’s freedom. 15th August is celebrated with high enthusiasm in order to pay honour to our legendary freedom fighters, who sacrificed their lives for our motherland. Independence Day motivates us to love our country and be forever willing to sacrifice our lives for its honour and integrity.
+        </p>
+
+ 
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $(".toggle").click(function(){
+                $(".slidebar-contact").toggleClass("active")
+                $(".toggle").toggleClass("active")
+            })
+        })
+        </script>
+
+</body>
+</html>

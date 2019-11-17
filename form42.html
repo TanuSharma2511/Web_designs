@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+    body{
+        margin:0;
+        padding:0;
+        font-family:sans-serif;
+        background:#726e6e;
+    }
+    .profile-card{
+        width:400px;
+        overflow:hidden;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        background:white;
+        color:#314652;
+    }
+    .header{
+        width:100%;
+        height:200px;
+        overflow:hidden;
+        position:relative;
+
+    }
+    .header:before{
+        content:"";
+        position:absolute;
+        border-top:30px solid transparent;
+        border-left: 400px solid white;
+        bottom:0;
+    }
+    .header img{
+        width:100%;
+        height:199px;
+    }
+    .content{
+        padding:10px;
+        overflow:hidden;
+        text-align: center;
+    }
+    .content h2{
+        margin:0 5px 0 0 ;
+    }
+    .content ul{
+        margin:0;
+        padding:0;
+    }
+    .content ul li{
+        list-style: none;
+        display: inline-block;
+        margin:3px;
+
+    }
+    .content ul li a{
+        text-decoration: none;
+        font-size:24px;
+        color:white;
+        background:#314652;
+        width:30px;
+        height:30px;
+        border-radius: 50%;
+        line-height:30px;
+        transition:0.5s;
+    }
+    .content ul li a:hover{
+        transform:scale(1.2);
+    }
+    .footer{
+        width:100%;
+        height:80px;
+        background: #314652;
+        position:relative;
+        color:white;
+    }
+    .footer:before{
+        content:"";
+        position:absolute;
+        border-bottom:30px solid transparent;
+        border-right: 400px solid white;
+        top:-1px;
+    }
+    .footer p{
+        margin:0;
+        padding:30px;
+        display: block;
+    }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <div class="header">
+            <img src="cute.jpg" alt="">
+        </div>
+        <div class="content">
+            <h2>DarkCode</h2>
+            <h3>Web Developer - Web Designer</h3>
+            <p><strong>She knows web designing</strong>,web scratching and a lot more stuff about web development. </p>
+            <ul>
+                <li><a href="" class="fa fa-facebook"></a></li>
+                    
+                <li>   <a href="" class="fa fa-twitter"></a></li>
+                <li>  <a href="" class="fa fa-instagram"></a></li>
+                <li> <a href="" class="fa fa-youtube"></a></li>
+                <!-- <li>   <a href="" class="fa fa-whatsapp"></a></li> -->
+            </ul>
+        </div>
+        <div class="footer">
+            <p>Coded By Darkcode</p>
+        </div>
+    </div>
+</body>
+</html>

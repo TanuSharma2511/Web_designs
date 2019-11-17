@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    
+    
+    <style>
+         @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+    body{
+        margin:0;
+        padding:0;
+        font-family: sans-serif;
+        background-image:linear-gradient(100deg,#2c3e50,#27ae60,#2980b9,#e74c3c,#8e44ad);
+        background-size: 400%;
+        animation:bganimation 15s infinite;
+        
+    }
+    .text{
+        color:white;
+        text-align:center;
+        text-transform: uppercase;
+        margin:350px 0;
+        font-size:22px;
+    }
+    @keyframes bganimation {
+        0%{
+            background-position;:0% 50%;
+        }
+        50%{
+            background-position:100% 50%;
+        }
+        100%{
+            background-position:0% 50%;
+        }
+    }
+    .middle{
+            position: absolute;
+            bottom:350px;
+        }
+        .sm-container{
+            text-align: center;
+        }
+    .sm-container i{
+        color:#f5f6fa;
+        padding:20px;
+        font-size:20px;
+        cursor:pointer;
+        transition:0.4s
+    }    
+    .sm-container a{
+        color:#f5f6fa;
+        padding:20px;
+        font-size:20px;
+        cursor:pointer;
+        transition:0.4s
+    }
+    .sm-container i:hover{
+        transform:scale(1.2);
+    } 
+    .sm-container a:hover{
+        transform:scale(1.2);
+    }    
+    .sm-menu{
+        background:#487eb0;
+        position: absolute;
+        border-radius:8px;
+    }
+    .sm-menu::before{
+        content:"";
+        width:10px;
+        height:10px;
+        background:#487eb0;
+        position:absolute;
+        top:-5px;
+        left:50%;
+        transform: translateX(-50%) rotate(45deg);
+
+    }
+
+    </style>
+</head>
+<body>
+    <div class="text">
+        Gradient Background Animation
+    </div>
+    <div class="middle">
+        <div class="sm-container">
+            <i class="show-btn fa fa-user"></i>
+            <div class="sm-menu">
+                    <a href="" class="fa fa-facebook"></a>
+                
+                    <a href="" class="fa fa-twitter"></a>
+                    <a href="" class="fa fa-instagram"></a>
+                    <a href="" class="fa fa-youtube"></a>
+                    <a href="" class="fa fa-whatsapp"></a>
+                    <a href="" class="fa fa-facebook"></a>
+            </div>
+        </div>
+    </div>
+    <script>
+    $(".show-btn").click(function(){
+      $(".sm-menu").fadeToggle("fast");
+    });
+    </script>
+</body>
+</html>

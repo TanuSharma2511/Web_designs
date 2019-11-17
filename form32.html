@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+   @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+    body{
+        margin:0;
+        padding:0;
+        background:#ffeaa7;
+    }
+    .card{
+        width:340px;
+        background: #f1f1f1;
+        overflow:hidden;
+        font-display:"montserrat";
+        box-shadow: 0 0 20px #00000070;
+    }
+    .middle{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%)
+    }
+    .top-section{
+        position:relative;
+    }
+    .top-section img{
+        width:100%;
+    }
+    .menuicon{
+        position:absolute;
+        width:22px;
+        left:20px;
+        top:20px;
+    }
+    .menuicon span{
+        width:100%;
+        height:3px;
+        background:#000;
+        position: relative;
+        display:block;
+        margin-bottom: 6px;
+        opacity:.5;
+        transition:.4s;
+
+    }
+    .menuicon .s1{
+        left:-5px;
+    }
+    .menuicon .s2{
+        left:5px;
+    }
+    .menuicon:hover span{
+        left:0;
+    }
+    .name{
+        position: absolute;
+        bottom:20px;
+        left:20px;
+        font-size: 40px;
+        font-weight: 900;
+        opacity:0.5;
+        color:#f1f1f1;
+    }
+    .name span{
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    .info-section{
+        padding:40px;
+        padding-top: 0;
+        color:#333;
+    }
+    h2{
+        position: relative;
+        font-size:20px;
+    }
+    .border{
+        width:30px;
+        height:3px;
+        background:#778bab;
+        position: absolute;
+        left:0;
+        bottom:-6px;
+
+    }
+    p{
+        text-align: justify;
+        font-size:16px;
+    }
+    .s-m{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .s-m a{
+        text-decoration: none;
+        font-size:20px;
+        color:#333;
+        padding:0 14px;
+        transition:.4s;
+    }
+    .s-m a:hover{
+        color:#778bab;
+        transform: scale(1.5);
+    }
+
+    </style>
+</head>
+<body>
+    <div class="card middle">
+        <div class="top-section">
+            <img src="girl.jpg" alt="">
+            <div class="menuicon">
+                <span class="s1"></span>
+                <span class="s2"></span>
+            </div>
+            <div class="name">
+                Dean
+                <span>Nunez</span>
+            </div>
+        </div>
+        <div class="info-section">
+            <h2>About
+                <div class="border"></div>
+            </h2>
+            <p>Designs are the best thing to show your talent.I dont why but people till now does not consider it as a passion or you can say job occupation.</p>
+            <h2>contact
+                <div class="border"></div>
+            </h2>
+            <div class="s-m">
+                <a href="" class="fa fa-facebook"></a>
+                <a href="" class="fa fa-twitter"></a>
+                <a href="" class="fa fa-instagram"></a>
+                <a href="" class="fa fa-youtube"></a>
+                <a href="" class="fa fa-whatsapp"></a>
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

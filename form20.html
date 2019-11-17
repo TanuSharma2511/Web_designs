@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        font-family: sans-serif;
+        box-sizing: border-box;
+    }
+    body{
+        background:#7ed6df;
+        transition:0.6s linear;
+    }
+    .product-card{
+        width:400px;
+        background:#ecedef;
+        padding:40px;
+        position:absolute;
+        left:50%;
+        top:50%;
+        transform:translate(-50%,-50%);
+        text-transform: uppercase;
+
+    }
+    .product-card h1{
+        font-size:22px;
+        margin-bottom:4px;
+    }
+    .product-card p{
+        font-size:13px;
+        color:#bbb;
+    }
+    .product-pic{
+        background-image:url(shoe3.jpg) ;
+        width:100%;
+        height:200px;
+        background-size: cover;
+        background-position: center;
+    }
+    .product-colors{
+        margin-bottom: 40px;
+        display:flex;
+        justify-content: center;
+    }
+    .product-colors span{
+        width:14px;
+        height:14px;
+        margin:0 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        position:relative;
+    }
+    .blue{
+        background:#7ed6df;
+    }
+    .green{
+        background: #badc58;
+    }
+    .yellow{
+        background:#f9ca24;
+    }
+    .red{
+        background: #ff7979;
+    }
+    .product-colors .active:after{
+        content:"";
+        width:22px;
+        height:22px;
+        border-radius: 50%;
+        position: absolute;
+        border:2px solid;
+        box-sizing: border-box;
+        left:-4px;
+        top:-4px;
+    }
+    .product-info{
+        display:flex;
+        align-items: center;
+    }
+    .product-price{
+        color:#7ed6df;
+        font-size: 26px;
+    }
+    .product-button{
+        margin-left:auto;
+        background:white;
+        color:#7ed6df;
+        text-decoration: none;
+        border:2px solid;
+        padding:8px 24px;
+        border-radius: 20px;
+        transition:0.4s linear;
+    }
+    .product-button:hover{
+        transform:scale(1.06);
+       
+    }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="product-card">
+        <h1>Original Shoes</h1>
+        <p>Lorem Ipsum dolor sit amet.</p>
+        <div class="product-pic"></div>
+            <div class="product-colors">
+                <span class="blue active" data-color="#7ed6df" data-pic="url(shoe3.jpg)"></span>
+                <span class="green" data-color="#badc58" data-pic="url(shoe2.jpg)"></span>
+                <span class="yellow" data-color="#f9ca24" data-pic="url(shoe4.jpg)"></span>
+                <span class="red" data-color="#ff7979" data-pic="url(shoe1.jpg)"></span>
+            </div>
+            <div class="product-info">
+                <div class="product-price">$90</div>
+                <a href="#" class="product-button">Add to Cart</a>
+
+            </div>
+        </div>
+    </body>
+            <script>
+            $(".product-colors span").click(function(){
+                $(".product-colors span").removeClass("active");
+                $(this).addClass("active");
+                $("body").css("background",$(this).attr("data-color"));
+                $(".product-price").css("color",$(this).attr("data-color"));
+                $(".product-button").css("color",$(this).attr("data-color"));
+                $(".product-pic").css("background-image",$(this).attr("data-pic"));
+            });
+
+            </script>
+        
+</html>

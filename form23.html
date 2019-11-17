@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        text-decoration: none;
+        font-family: sans-serif;
+    }
+    body{
+        background: #6ab04c;
+    }
+    .card{
+        width:360px;
+        background: #f1f1f1;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+    }
+    .top-section{
+        height:310px;
+        overflow: hidden;
+        background: #fff;
+        position: relative;
+    }
+    #image-container{
+        width:360px;
+        height:240px;
+    }
+    .nav{
+        text-align:center;
+
+    }
+    .nav img{
+        width:80px;
+        height:50px;
+        border:2px solid #ddd;
+        margin:8px 2px;
+        cursor:pointer;
+        transition:0.3s;
+    }
+    .nav img:hover{
+        border-color: #6ab04c;
+    }
+    .price{
+        position: absolute;
+        top:20px;
+        right:20px;
+        color:#6ab04c;
+        font-size: 24px;
+    }
+    .product-info{
+        padding:24px;
+    }
+    .name{
+        text-transform: uppercase;
+        font-size: 24px;
+        color:#333;
+    }
+    .dis{
+        font-size:16px;
+        opacity: 0.7;
+    }
+    .btn{
+        display:block;
+        background:#6ab04c;
+        color:#fff;
+        text-align: center;
+        padding:10px;
+        margin-top:10px;
+        transition:0.3s;
+    }
+    .btn:hover{
+        background:#333;
+    }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="top-section">
+            <img id="image-container" src="goggle4.jpg" alt="">
+            <div class="nav">
+                <img onclick="change_img(this)" src="goggle4.jpg" alt="">
+                <img onclick="change_img(this)"src="goggle1.jpg" alt="">
+                <img onclick="change_img(this)" src="google3.jpg" alt="">
+                
+            </div>
+           <div class="price">$80</div>
+        </div>
+        <div class="product-info">
+            <div class="name">Sanglasses</div>
+            <div class="dis">Awesome Man Sanglasses</div>
+            <a class="btn" href="#">Add to Cart</a>
+        </div>
+    </div>
+    <script>
+    var container = document.getElementById("image-container");
+    function change_img(image){
+        container.src=image.src;
+    }
+    </script>
+</body>
+</html>

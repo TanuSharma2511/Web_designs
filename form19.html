@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     
+     @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+    body{
+        margin:0;
+        padding:0;
+        font-family: sans-serif;
+        background:#f1f1f1;
+    }
+    .middle{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+    }
+    .task-list{
+        width:400px;
+        padding:40px;
+        background:url(green.jpg) no-repeat;
+        background-size:cover;
+    }
+    .task-list h2{
+        color:#fff;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+    .task{
+        display:flex;
+        padding:10px 0;
+        align-items: center;
+        cursor:pointer;
+    }
+    .task input{
+        position:absolute;
+        visibility: hidden;
+    }
+    .task i{
+        display:inline-block;
+        width:48px;
+        height:48px;
+        border-radius: 50%;
+        border:1px solid black;
+        text-align: center;
+        line-height:48px;
+        font-size:20px;
+        margin-right:14px;
+        color:transparent;
+    }
+    .text{
+        font-size:18px;
+        color:#fff;
+    }
+     .task input:checked ~i{
+         color:#e74c3c;
+     }
+     .task input:checked ~ .text{
+         text-decoration: line-through;
+         color:#e74c3c;
+     }
+    </style>
+</head>
+<body>
+    <div class="task-list middle">
+        <h2>My Tasks</h2>
+        <label class="task">
+            <input type="checkbox">
+            <i class="fa fa-check" aria-hidden="true"></i>
+            <span class="text">Have breakfast</span>
+        </label>
+        <label class="task">
+            <input type="checkbox">
+            <i class="fa fa-check" aria-hidden="true"></i>
+            <span class="text">Go to School</span>
+        </label>
+        <label class="task">
+            <input type="checkbox">
+            <i class="fa fa-check" aria-hidden="true"></i>
+            <span class="text">Read a book</span>
+        </label>
+        <label class="task">
+            <input type="checkbox">
+            <i class="fa fa-check" aria-hidden="true"></i>
+            <span class="text">Play games</span>
+        </label>
+    </div>
+</body>
+</html>

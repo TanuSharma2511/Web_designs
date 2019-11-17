@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+    body{
+        margin:0;
+        padding:0;
+        font-family:sans-serif;
+        background:#333;
+    }
+    .contact-info{
+        position:fixed;
+        top:40%;
+        z-index:99999;
+        left:0;
+    }
+    .option{
+        cursor:pointer;
+        position:relative;
+    }
+    .option i{
+        display:block;
+        width:60px;
+        text-align:center;
+        height:60px;
+        line-height:60px;
+        background:black;
+        color:#b9b9b9;
+        font-size:20px;
+        transition:0.6s;
+    }
+    .option:hover i{
+        color:#3498db;
+    }
+    .text{
+        position:absolute;
+        height:60px;
+        width:200px;
+        background: #1b1b1b;
+        top:0;
+        z-index:-1;
+        left:-140px;
+        color:#3498db;
+        line-height: 60px;
+        text-align:center;
+        transition:0.6s;
+        
+
+    }
+    .option:hover .text{
+        left:60px;
+    }
+    .sign-up-form{
+        width:300px;
+        background: #fff;
+        box-shadow:0 0 3px 0 rgba(0,0,0,0.3);
+        padding:20px;
+        margin:8% auto 8%;
+        text-align: center;
+    }
+    .sign-up-form i{
+        font-size:45px;
+        width:70px;
+        color:#1c8adb;
+        margin-top: 10px;
+
+    }
+    .sign-up-form h1{
+        color:black;
+        margin-bottom: 30px;
+    }
+    .input-box{
+        border-radius:20px;
+        padding:10px;
+        margin:10px 0;
+        width:90%;
+        border:1px solid #999;
+        outline: none;
+    }
+    button{
+        color:#fff;
+        width:100%;
+        padding:10px;
+        border-radius: 20px;
+        margin:10px 0;
+        border:none;
+        outline:none;
+        cursor:pointer;
+
+    }
+    .signup-btn{
+        background-color: #1c8adb;
+    }
+    .twitter-btn{
+        background-color: #21afde;
+    }
+    a{
+        text-decoration: none;
+    }
+    hr{
+        margin-top:20px;
+        width:80%;
+        }
+    .or{
+        background: #fff;
+        width:30px;
+        margin:-19px auto 10px;
+    }    
+    .check{
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <div class="contact-info">
+        <div class="option">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+             <div class="text">Meknes Morocco</div>
+        </div>
+
+        <div class="option">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+             <div class="text">Example@domain.com</div>
+        </div>
+
+        <div class="option">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+             <div class="text">21200000000</div>
+        </div>
+    </div>
+    <div class="sign-up-form">
+            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+        <h1>Sign up now</h1>
+        <form>
+            <input type="email" class="input-box" placeholder="Your Email">
+            <input type="password" class="input-box" placeholder="Your Password">
+             <p><span><input type="checkbox" class="check"></span>I agree to terms of services</p>
+            <button type="button" class="signup-btn">Sign up</button>
+            <hr>
+            <p class="or">OR</p>
+            <button type="button" class="twitter-btn">Login with twitter</button>
+             <p>Do you have any account ?<a href="#">Sign in</a></p>
+        </form>
+    </div>
+</body>
+</html>
